@@ -1,0 +1,9 @@
+<!--center.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="/images/icon_01.png" background-size="cover"></image>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">麦享会会员信息</text>
+  </view>
+</view>
