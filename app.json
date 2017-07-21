@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/mycenter/mycenter"
+    "pages/mycenter/mycenter",
+    "pages/mycenter/userinfo"
   ],
   "window":{
     "backgroundTextStyle":"light",
