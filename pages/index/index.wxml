@@ -6,12 +6,13 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+    <text class="user-motto">{{name}}</text>
   </view>
 
   <!-- footer -->
   <view class="btn-area">
     <navigator class="menus" url="/pages/mycenter/mycenter" hover-class="navigator-hover">个人中心</navigator>
-    <navigator class="menus" url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">test</navigator>
-    <navigator class="menus" url="/page/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
+    <!-- <navigator class="menus" url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">test</navigator>
+    <navigator class="menus" url="/page/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator> -->
   </view>
 </view>
