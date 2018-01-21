@@ -5,3 +5,21 @@
     </swiper-item>    
   </block>
 </swiper> 
+<view class="section">
+  <view class="flex-sm" style="flex-direction:row;">
+    <text>自然 舒适 享受 优美</text>
+    <view class='line-style-gradient'></view>
+  </view> 
+</view>
+<view class="section">
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item" wx:for="{{lists}}" wx:for-index="index">
+      <view class="flex-img">
+        <image style="width: 100%; height: 160px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{item.url}}"></image>
+      </view>
+      <view class="flex-p">
+        <text class='flex-tit'>{{item.tit}}</text>
+      </view>
+    </view>
+  </view> 
+</view>   
