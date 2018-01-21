@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/music/music",
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
     "pages/mycenter/userinfo",
-    "pages/mycenter/mycenter"
+    "pages/mycenter/mycenter",
+    "pages/music/music"
   ],
   "window": {
     "backgroundTextStyle": "light",
