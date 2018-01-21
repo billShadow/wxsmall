@@ -6,3 +6,11 @@
   height: 100%;
   width: 100%;
 }
+.section{
+  width:100%;
+  height: 100rem;
+}
+.section__title{
+  color: red;
+  margin-left: 30%;
+}

@@ -1,0 +1,19 @@
+<button class="button-style" type="primary" bindtap="listenerButtonPlay">播放</button>  
+<button class="button-style" type="primary" bindtap="listenerButtonPause">暂停</button>  
+<button class="button-style" type="primary" bindtap="listenerButtonSeek">设置播放进度</button>  
+<button class="button-style" type="primary" bindtap="listenerButtonStop">停止播放</button>  
+<button class="button-style" type="primary" bindtap="listenerButtonGetPlayState">获取播放状态</button>
+
+<view wx:for="{{musci}}" wx:for-index="ids" wx:for-item="item">
+  <view class="listbar"  bindtap='star_mus'  id="{{item.urls}}">
+    <!-- <text class="tel_num">{{ids+1}}.</text> -->
+    <view class='tel_num'>
+      <image style="width:35px;height:35px" src='http://i.gtimg.cn/music/photo/mid_album_90/a/F/000QgFcm0v8WaF.jpg' />
+    </view>
+    <view class="tel_name">
+      <text class="tel_bag">{{item.name}}\n</text>
+      <text class="tel_small">{{item.author}}</text>
+    </view>
+    <text class="tel_act">{{item.name}}</text>
+  </view>
+</view>

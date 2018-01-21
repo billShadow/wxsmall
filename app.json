@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/music/music",
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
@@ -24,8 +25,8 @@
         "selectedIconPath": "images/ico_home_02.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "首页",
+        "pagePath": "pages/music/music",
+        "text": "电台",
         "iconPath": "images/ico_mus_01.png",
         "selectedIconPath": "images/ico_mus_02.png"
       },
@@ -36,5 +37,8 @@
         "selectedIconPath": "images/ico_me_02.png"
       }
     ]
+  },
+  "globalData":{
+    "api_url":"home.hackbill.com"
   }
 }

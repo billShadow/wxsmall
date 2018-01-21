@@ -24,6 +24,7 @@ App({
   },
 
   globalData: {
-    userInfo: null
+    userInfo: null,
+    api_url: 'https://home.hackbill.com'
   }
 })
