@@ -4,7 +4,7 @@
 <button class="button-style" type="primary" bindtap="listenerButtonStop">停止播放</button>  
 <button class="button-style" type="primary" bindtap="listenerButtonGetPlayState">获取播放状态</button>
 
-<view class='list-content' wx:for="{{musci}}" wx:for-index="ids" wx:for-item="item">
+<view class='list-content' wx:for="{{music_list}}" wx:for-index="ids" wx:for-item="item">
   <view class="listbar"  bindtap='star_mus'  id="{{item.urls}}">
     <!-- <text class="tel_num">{{ids+1}}.</text> -->
     <view class='tel_num'>

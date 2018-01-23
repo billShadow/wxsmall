@@ -80,17 +80,23 @@ Page({
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数  
-    var url = app.globalData.api_url+'/test/test';
+    var url = app.globalData.api_url +'/api/music/musiclist';
     var that = this;
     wx.request({
       url: url,
       method: 'post',
       header : {'content-type':'applicatio/json'},
       success : function (res) {
-        console.log(res)
-        that.setData({
-          music_list:res.data
-        });
+        
+        console.log(111)
+        console.log(res.data)
+        if (res.data.code == 200) {
+          that.setData({
+            music_list: res.data.data
+          });
+        } else {
+          console.log('404');
+        }
       }
     })
 

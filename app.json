@@ -31,7 +31,7 @@
         "selectedIconPath": "images/ico_mus_02.png"
       },
       {
-        "pagePath": "pages/mycenter/mycenter",
+        "pagePath": "pages/index/index",
         "text": "我的",
         "iconPath": "images/ico_me_01.png",
         "selectedIconPath": "images/ico_me_02.png"
