@@ -1,11 +1,12 @@
 var app = getApp()
 var urls = "http://sc1.111ttt.cn/2015/1/02/23/95230619282.mp3";
+var http_url = "http://i.gtimg.cn/music/photo/mid_album_90/a/F/";
 //console.log(api_url);
 Page({
   data: {
     musci: [
-      {"name": "我们不一样", "author":"群星","urls": "http://sc1.111ttt.cn/2015/1/02/23/95230619282.mp3"},
-      { "name": "凉凉","author":"发姐", "urls": "http://vip.baidu190.com/uploads/2017/20170207ff925ef6f268a5563f0552c3ba141f.mp3"},
+      { name: "我们不一样", author: "群星", "urls": urls, img: http_url+'000QgFcm0v8WaF.jpg'},
+      { "name": "凉凉", "author": "发姐", "urls": "http://vip.baidu190.com/uploads/2017/20170207ff925ef6f268a5563f0552c3ba141f.mp3", img: http_url + '000QgFcm0v8WaF.jpg'}
       ]
   },
   star_mus:function(event){
@@ -16,7 +17,7 @@ Page({
       dataUrl: box_url,
       title: '薛之谦',
       //图片地址地址  
-      coverImgUrl: 'http://i.gtimg.cn/music/photo/mid_album_90/a/F/000QgFcm0v8WaF.jpg'
+      coverImgUrl: http_url + '000QgFcm0v8WaF.jpg'
 
     })
   }
@@ -27,7 +28,7 @@ Page({
       dataUrl: urls,
       title: '薛之谦',
       //图片地址地址  
-      coverImgUrl: 'http://i.gtimg.cn/music/photo/mid_album_90/a/F/000QgFcm0v8WaF.jpg'
+      coverImgUrl: http_url + '000QgFcm0v8WaF.jpg'
 
     })
   },
