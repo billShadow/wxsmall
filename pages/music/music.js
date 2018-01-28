@@ -10,73 +10,35 @@ Page({
       ]
   },
   star_mus:function(event){
-    console.log(event);
-    console.log(event.currentTarget.id);
     var box_url = event.currentTarget.id;
-    wx.playBackgroundAudio({
-      dataUrl: box_url,
-      title: '薛之谦',
-      //图片地址地址  
-      coverImgUrl: http_url + '000QgFcm0v8WaF.jpg'
+    console.log(app)
 
-    })
-  }
-  ,
-  //播放  
-  listenerButtonPlay: function () {
-    wx.playBackgroundAudio({
-      dataUrl: urls,
-      title: '薛之谦',
-      //图片地址地址  
-      coverImgUrl: http_url + '000QgFcm0v8WaF.jpg'
-
-    })
-  },
-  //监听button暂停按钮  
-  listenerButtonPause: function () {
-    wx.pauseBackgroundAudio({
-    });
-    console.log('暂停播放')
-  },
-  /**  
-   * 播放状态  
-   */
-  listenerButtonGetPlayState: function () {
-    wx.getBackgroundAudioPlayerState({
-      success: function (res) {
-        // success  
-        //duration  选定音频的长度（单位：s），只有在当前有音乐播放时返回  
-        console.log('duration:' + res.duration)
-        console.log('currentPosition:' + res.currentPosition)
-        //status    播放状态（2：没有音乐在播放，1：播放中，0：暂停中）  
-        console.log('status:' + res.status)
-        console.log('downloadPercent:' + res.downloadPercent)
-        //dataUrl   歌曲数据链接，只有在当前有音乐播放时返回   
-        console.log('dataUrl:' + res.dataUrl)
-      },
-      fail: function () {
-        // fail  
-      },
-      complete: function () {
-        // complete  
+    const backgroundAudioManager = wx.getBackgroundAudioManager()
+    var star_type = backgroundAudioManager.paused
+    console.log(backgroundAudioManager.paused)
+    var name = this.data.music_list[box_url]['name']
+    var author = this.data.music_list[box_url]['author']
+    var music_url = this.data.music_list[box_url]['urls']
+    
+    backgroundAudioManager.title = name
+    backgroundAudioManager.epname = name
+    backgroundAudioManager.singer = author
+    backgroundAudioManager.coverImgUrl = this.data.music_list[box_url]['img']
+    console.log(backgroundAudioManager.title)
+    if (star_type == true || star_type == undefined) {
+      backgroundAudioManager.play()
+      wx.setStorageSync("curr_music", name);
+      backgroundAudioManager.src = music_url // 设置了 src 之后会自动播放
+    } else if (star_type == false) {
+      var now_muc = wx.getStorageSync("curr_music")
+      if (now_muc != name) {
+        backgroundAudioManager.play()
+        backgroundAudioManager.src = music_url // 设置了 src 之后会自动播放
+      } else {
+        backgroundAudioManager.stop()
       }
-    })
-  },
-  /**  
-   * 设置进度  
-   */
-  listenerButtonSeek: function () {
-    wx.seekBackgroundAudio({
-      position: 40
-    })
-  },
-  /**  
-   * 停止播放  
-   */
-  listenerButtonStop: function () {
-    wx.stopBackgroundAudio({
-    })
-    console.log('停止播放')
+    }
+
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数  
@@ -98,28 +60,8 @@ Page({
           console.log('404');
         }
       }
-    })
+    });
 
-    /**   
-     * 监听音乐播放   
-     */
-    wx.onBackgroundAudioPlay(function () {
-      // callback  
-      console.log('onBackgroundAudioPlay')
-    })
-    /**  
-     * 监听音乐暂停  
-     */
-    wx.onBackgroundAudioPause(function () {
-      // callback  
-      console.log('onBackgroundAudioPause')
-    })
-    /**  
-     * 监听音乐停止  
-     */
-    wx.onBackgroundAudioStop(function () {
-      // callback  
-      console.log('onBackgroundAudioStop')
-    })
+    
   }
 })  

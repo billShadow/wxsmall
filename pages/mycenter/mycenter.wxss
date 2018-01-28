@@ -1,0 +1,86 @@
+.bigbox {
+  width:100%;
+  background-color: #F7F7F7;
+}
+.info-banner {
+  width:100%;
+  height:200rpx;
+  background-color: gray;
+}
+
+.info-img {
+  width:40%;
+  height:200rpx;
+  background-color: white;
+  float:left;
+}
+.info-img image {
+  width:200rpx;
+  height:200rpx;
+  border:0px solid;
+  border-radius:50%;
+  margin-left:50rpx;
+}
+
+.info-name {
+  width:60%;
+  height:200rpx;
+  background-color: white;
+  float:left;
+}
+
+.info-name text{
+  line-height: 200rpx;
+  font-size: 50rpx;
+  font-weight: 20rpx;
+}
+.brs {
+  width:100%;
+  height:20rpx;
+}
+.hrs {
+  width:100%;
+  height:8rpx;
+}
+.fot {
+   width:100%; 
+   height:450rpx;
+}
+.bar_near{
+  width:100%;
+  height:120rpx;
+  background-color: gray;
+}
+
+.bar_icon {
+  width:20%;
+  height:120rpx;
+  background-color: white;
+  float: left;
+  line-height: 120rpx;
+}
+.icon_img {
+  width:80rpx;
+  height:80rpx;
+  padding:20rpx 20rpx;
+}
+.bar_title {
+  width:55%;
+  height:120rpx;
+  background-color: white;
+  float:left;
+  line-height: 120rpx;
+}
+.bar_end {
+  width:25%;
+  height:120rpx;
+  background-color: white;
+  float:left;
+  text-align: right;
+  line-height: 120rpx;
+}
+.right_link{
+  width:40rpx;
+  height:40rpx;
+  margin:0rpx 20rpx;
+}

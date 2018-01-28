@@ -1,11 +1,8 @@
-<button class="button-style" type="primary" bindtap="listenerButtonPlay">播放</button>  
-<button class="button-style" type="primary" bindtap="listenerButtonPause">暂停</button>  
-<button class="button-style" type="primary" bindtap="listenerButtonSeek">设置播放进度</button>  
-<button class="button-style" type="primary" bindtap="listenerButtonStop">停止播放</button>  
-<button class="button-style" type="primary" bindtap="listenerButtonGetPlayState">获取播放状态</button>
-
+ <view class="banner_img"> 
+  <image class="banner_img" src='http://p1.music.126.net/UIktAxWDLbmF87gQF9FmDg==/109951163118447003.jpg' />
+ </view> 
 <view class='list-content' wx:for="{{music_list}}" wx:for-index="ids" wx:for-item="item">
-  <view class="listbar"  bindtap='star_mus'  id="{{item.urls}}">
+  <view class="listbar"  bindtap='star_mus'  id="{{ids}}">
     <!-- <text class="tel_num">{{ids+1}}.</text> -->
     <view class='tel_num'>
       <image class='Img-Music' src="{{item.img}}" />

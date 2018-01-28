@@ -1,9 +1,35 @@
 <!--center.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="/images/icon_01.png" background-size="cover"></image>
+<view class='bigbox'>
+  <view class="info-banner">
+    <view class="info-img"><image src='{{userInfo.avatarUrl}}' /></view>
+    <view class="info-name"><text>{{userInfo.nickName}}</text></view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">麦享会会员信息</text>
+
+  <view class="brs"></view>
+
+  <view class='bar_near'>
+    <view class="bar_icon"><image class='icon_img' src="../../images/near_hot.png" /></view>
+    <view class="bar_title">最近播放</view>
+    <view class="bar_end"><text>99</text><image class="right_link" src="../../images/right_link.png" /></view>
   </view>
+  <view class="hrs"></view>
+  <view class='bar_near'>
+    <view class="bar_icon"><image class='icon_img' src="../../images/college.png" /></view>
+    <view class="bar_title">我的收藏</view>
+    <view class="bar_end"><text>99</text><image class="right_link" src="../../images/right_link.png" /></view>
+  </view>
+  <view class="hrs"></view>
+  <view class='bar_near'>
+    <view class="bar_icon"><image class='icon_img' src="../../images/music_menu.png" /></view>
+    <view class="bar_title">我创建的歌单</view>
+    <view class="bar_end"><text>99</text><image class="right_link" src="../../images/right_link.png" /></view>
+  </view>
+  <view class="hrs"></view>
+  <view class='bar_near'>
+    <view class="bar_icon"><image class='icon_img' src="../../images/make_idea.png" /></view>
+    <view class="bar_title">我创作的歌曲</view>
+    <view class="bar_end"><text>99</text><image class="right_link" src="../../images/right_link.png" /></view>
+  </view>
+  <view class="fot"></view>
+
 </view>

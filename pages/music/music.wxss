@@ -1,4 +1,12 @@
-list-content {
+.banner_view {
+  height: 260rpx;
+  display: block;
+}
+.banner_img {
+  height:260rpx;
+  width:100%;
+}
+.list-content {
    width: 100%;
    height: auto;
    overflow: hidden;
