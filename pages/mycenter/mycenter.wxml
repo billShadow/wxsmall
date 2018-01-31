@@ -1,6 +1,6 @@
 <!--center.wxml-->
 <view class='bigbox'>
-  <view class="info-banner">
+  <view class="info-banner" style="background:url('{{userInfo.avatarUrl}}') no-repeat">
     <view class="info-img"><image src='{{userInfo.avatarUrl}}' /></view>
     <view class="info-name"><text>{{userInfo.nickName}}</text></view>
   </view>

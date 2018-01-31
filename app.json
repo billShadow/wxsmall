@@ -4,7 +4,6 @@
     "pages/music/music",
     "pages/home/home",
     "pages/index/index"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",

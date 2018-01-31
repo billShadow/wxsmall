@@ -49,8 +49,6 @@ Page({
       method: 'post',
       header : {'content-type':'applicatio/json'},
       success : function (res) {
-        
-        console.log(111)
         console.log(res.data)
         if (res.data.code == 200) {
           that.setData({
